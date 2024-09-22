@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hardik.padhai.karo.com_hardik_padhai_kro.entities.Job;
+import com.hardik.padhai.karo.com_hardik_padhai_kro.entities.JobEntity;
 import com.hardik.padhai.karo.com_hardik_padhai_kro.service.CarServiceImpl;
 import com.hardik.padhai.karo.com_hardik_padhai_kro.service.JobServiceImpl;
 
@@ -21,7 +21,7 @@ public class JobController {
 	
 	
 	@GetMapping("records")
-	public List<Job> findAllRec(){
+	public List<JobEntity> findAllRec(){
 		car.setName("Bike");
 		return jobServiceImpl.allRecords();
 	}

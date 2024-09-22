@@ -6,26 +6,26 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "Job")
-public class Job {
+public class JobEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "job_id")
+    @Column(name = "JobID")
     private int jobId;
 
-    @Column(name = "job_title", nullable = false, length = 100)
+    @Column(name = "JobTitle", nullable = false, length = 100)
     private String jobTitle;
 
-    @Column(name = "min_salary", precision = 10, scale = 2)
+    @Column(name = "MinSalary", precision = 10, scale = 2)
     private BigDecimal minSalary;
 
-    @Column(name = "max_salary", precision = 10, scale = 2)
+    @Column(name = "MaxSalary", precision = 10, scale = 2)
     private BigDecimal maxSalary;
 
     // Constructors
-    public Job() {}
+    public JobEntity() {}
 
-    public Job(String jobTitle, BigDecimal minSalary, BigDecimal maxSalary) {
+    public JobEntity(String jobTitle, BigDecimal minSalary, BigDecimal maxSalary) {
         this.jobTitle = jobTitle;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;

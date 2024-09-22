@@ -6,12 +6,12 @@ import java.util.Date;
 
 @Entity
 @Table(name = "employee")
-public class Employee {
+public class EmployeeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "EmpID")
-    private int empId;
+    @Column(name  = "EmpID")
+    private Integer empId;
 
     @Column(name = "FirstName", nullable = false, length = 50)
     private String firstName;
