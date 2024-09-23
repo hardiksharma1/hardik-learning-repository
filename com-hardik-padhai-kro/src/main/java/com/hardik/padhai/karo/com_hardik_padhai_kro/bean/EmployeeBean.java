@@ -19,7 +19,7 @@ public class EmployeeBean {
 	
 	public EmployeeBean(Integer empId, String empFirstName, String empLastName, String jobTitle, BigDecimal minSalary,
 			BigDecimal maxSalary) {
-		super();
+	
 //		returnCommmonSetter(empId,empFirstName,empLastName,jobTitle,minSalary,maxSalary);
 		
 		this.empId = empId;
@@ -33,8 +33,8 @@ public class EmployeeBean {
 	
 	public EmployeeBean(Integer empId, String empFirstName, String empLastName, String jobTitle, BigDecimal minSalary,
 			BigDecimal maxSalary,Integer jobId) {
-		super();
-		new EmployeeBean(empId,empFirstName,empLastName,jobTitle,minSalary,maxSalary);
+	
+		this(empId,empFirstName,empLastName,jobTitle,minSalary,maxSalary);
 		this.jobId = jobId;
 	}
 	
